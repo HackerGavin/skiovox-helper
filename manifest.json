@@ -6,7 +6,6 @@
   "icons": {
     "128": "icon.png"
   },
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwnmXkLn2EnRoDsMdqeCx7Um81I6Bj+mjw/zOITS8eEKgmvsNB+tVpg3Z+ll/i0uqbTWSYqFiSwhUZWCaQB6eGZtenXa5w3Bk0+81tYG7i6S+osk2frIYCf33qxlR1EdDI+epyF4qTrrezWoNKSAHlQ1qbW0gwZGPN1zpGOWjiysymAJlCwOU4s3Q2tZQXkEGPm4g1RhU6PN7xjnUGz5v3lnRlOM4+wicUQGw4MG6F0gSPaRy4k8tHOiiaqPvuj0dy8uYUMsOIQAgUfm9qh04OyoXChfJp/j/3C52a1M6ixCTtxz1muCyaQCgzbhFdrP2WMr+KlCrl53NrmHZ8RRjMwIDAQAB",
   "commands": {
     "ACCESS_HISTORY": {
       "description": "Ctrl+H"
