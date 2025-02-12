@@ -1,103 +1,105 @@
 {
-  "manifest_version": 2,
-  "version": "2.4.1",
-  "name": "Skiovox Helper",
-  "description": "A helper for the Skiovox exploit -- read more at skiovox.com",
-  "icons": {
-    "128": "icon.png"
-  },
-  "key": "MIGfMA3GCSqGSIb3DFEBAQUAA4GNADCBiQKBgQDcBHwzDvyBQ6bDppkIs9MP4ksKqCMyXQ/A52JivHZKh4YO/9vJsT3oaZhSpDCE9RCocOEQvwsHsFReW2nUEc6OLLyoCFFxIb7KkLGsmfakkut/fFdNJYh0xOTbSN8YvLWcqph09XAY2Y/f0AL7vfO1cuCqtkMt8hFrBGWxDdf9CQIDAQAB",
-  "commands": {
-    "ACCESS_HISTORY": {
-      "description": "Ctrl+H"
-    },
-    "ACCESS_DOWNLOADS": {
-      "description": "Ctrl+J"
-    },
-    "NEW_TAB": {
-      "description": "Ctrl+T"
-    },
-    "CLOSE_TAB": {
-      "description": "Ctrl+W"
-    },
-    "RESTORE_TAB": {
-      "description": "Ctrl+Shift+T"
-    },
-    "NEW_WINDOW": {
-      "description": "Ctrl+N"
-    },
-    "NEW_INCOG_WINDOW": {
-      "description": "Ctrl+Shift+N"
-    },
-    "CLOSE_WINDOW": {
-      "description": "Ctrl+Shift+W"
-    },
-    "TAB_NEXT": {
-      "description": "Cycle forwards through tabs: Ctrl+Q"
-    },
-    "TAB_BACK": {
-      "description": "Cycle backwards through tabs: Ctrl+Shift+Q"
-    },
-    "SWITCH_WINDOWS": {
-      "description": "Switch windows: Alt+Q"
-    },
-    "CTRL_1": {
-      "description": "Ctrl+1"
-    },
-    "CTRL_2": {
-      "description": "Ctrl+2"
-    },
-    "CTRL_3": {
-      "description": "Ctrl+3"
-    },
-    "CTRL_4": {
-      "description": "Ctrl+4"
-    },
-    "CTRL_5": {
-      "description": "Ctrl+5"
-    },
-    "CTRL_6": {
-      "description": "Ctrl+6"
-    },
-    "CTRL_7": {
-      "description": "Ctrl+7"
-    },
-    "CTRL_8": {
-      "description": "Ctrl+8"
-    },
-    "CTRL_9": {
-      "description": "Ctrl+9"
-    },
-    "VIEW_SOURCE": {
-      "description": "Ctrl+U"
-    }
-  },
-  "background": {
-    "scripts": [
-      "/background/commands.js",
-      "/background/setup.js",
-      "/background/webstore-fix.js"
-    ]
-  },
-  "chrome_url_overrides": {
-    "newtab": "/new-tab/main.html"
-  },
-  "permissions": [
-    "commands",
-    "tabs",
-    "sessions",
-    "<all_urls>"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*/*"
-      ],
-      "js": [
-        "/content-scripts/window-open-fix.js"
-      ],
-      "all-frames": true,
-      "run-at": "document_start"
-    }
-  ]
+"manifest_version": 3
+,
+"version": "2.4.1",
+"name": "Skiovox Helper",
+"description": "A helper for the Skiovox exploit -- read more at skiovox.com",
+"icons": {
+"128": "icon.png"
+},
+"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwnmXkLn2EnRoDsMdqeCx7Um81I6Bj+mjw/zOITS8eEKgmvsNB+tVpg3Z+ll/i0uqbTWSYqFiSwhUZWCaQB6eGZtenXa5w3Bk0+81tYG7i6S+osk2frIYCf33qxlR1EdDI+epyF4qTrrezWoNKSAHlQ1qbW0gwZGPN1zpGOWjiysymAJlCwOU4s3Q2tZQXkEGPm4g1RhU6PN7xjnUGz5v3lnRlOM4+wicUQGw4MG6F0gSPaRy4k8tHOiiaqPvuj0dy8uYUMsOIQAgUfm9qh04OyoXChfJp/j/3C52a1M6ixCTtxz1muCyaQCgzbhFdrP2WMr+KlCrl53NrmHZ8RRjMwIDAQAB",
+"commands": {
+"ACCESS_HISTORY": {
+"description": "Ctrl+H"
+},
+"ACCESS_DOWNLOADS": {
+"description": "Ctrl+J"
+},
+"NEW_TAB": {
+"description": "Ctrl+T"
+},
+"CLOSE_TAB": {
+"description": "Ctrl+W"
+},
+"RESTORE_TAB": {
+"description": "Ctrl+Shift+T"
+},
+"NEW_WINDOW": {
+"description": "Ctrl+N"
+},
+"NEW_INCOG_WINDOW": {
+"description": "Ctrl+Shift+N"
+},
+"CLOSE_WINDOW": {
+"description": "Ctrl+Shift+W"
+},
+"TAB_NEXT": {
+"description": "Cycle forwards through tabs: Ctrl+Q"
+},
+"TAB_BACK": {
+"description": "Cycle backwards through tabs: Ctrl+Shift+Q"
+},
+"SWITCH_WINDOWS": {
+"description": "Switch windows: Alt+Q"
+},
+"CTRL_1": {
+"description": "Ctrl+1"
+},
+"CTRL_2": {
+"description": "Ctrl+2"
+},
+"CTRL_3": {
+"description": "Ctrl+3"
+},
+"CTRL_4": {
+"description": "Ctrl+4"
+},
+"CTRL_5": {
+"description": "Ctrl+5"
+},
+"CTRL_6": {
+"description": "Ctrl+6"
+},
+"CTRL_7": {
+"description": "Ctrl+7"
+},
+"CTRL_8": {
+"description": "Ctrl+8"
+},
+"CTRL_9": {
+"description": "Ctrl+9"
+},
+"VIEW_SOURCE": {
+"description": "Ctrl+U"
 }
+},
+"background": {
+"service_workers": [
+"/background/commands.js",
+"/background/setup.js",
+"/background/webstore-fix.js"
+]
+},
+"chrome_url_overrides": {
+"newtab": "/new-tab/main.html"
+},
+"permissions": [
+"commands",
+"tabs",
+"sessions",
+"<all_urls>"
+],
+"content_scripts": [
+{
+"matches": [
+":///*"
+],
+"js": [
+"/content-scripts/window-open-fix.js"
+],
+"all-frames": true,
+"run-at": "document_start"
+}
+]
+}
+
